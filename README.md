@@ -4,7 +4,7 @@ Howdy, this repo consist of various projects showcasing various API concepts tha
 
 ## 🚀 Express 101
 
-👉 [Visit project](https://github.com/Wahaj-Arsal)
+👉 [Visit project](https://github.com/Dnesh88/api-playground/tree/main/simple-express-app)
 
 ### 📝 Overview
 
