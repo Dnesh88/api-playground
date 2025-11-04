@@ -1,23 +1,28 @@
 # 🌿 Express 101
 
-Howdy, this repo consist of various projects showcasing various API concepts that I learn and use as I further develop my coding skills.
+This project uses a simple server which services various endpoints. I also utilise middleware utilities for providing add-on features. To simulate errors, which can happen replying on 3rd party services, I use a mock error.
 
-### 📝 Overview
+## 🖥️ Features & Design
 
-You can find various projects.
+- Middleware modules
+  - Created modules for common functionalities such as logging, handling errors, and non-existing resources request.
 
-### 🖥️ Features & Design
+```
+const logger = require("./middleware/logger");
+const notFound = require("./middleware/notFound");
+const errorHandler = require("./middleware/errorHandler");
+```
 
-- JavaScript modules
-
-### ⚙️ Technologies Used
+## ⚙️ Technologies Used
 
 - JavaScript
+- Node.js
+- Express
 
-**Tools:**
+## 🛠️ Tools Used
 
+- VS Code
 - Git and GitHub
-- GitHub Pages for deployment
 
 ## 🤝 Authors
 
