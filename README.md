@@ -2,8 +2,6 @@
 
 Howdy, this repo consist of various projects showcasing various API concepts that I learn and use as I further develop my coding skills.
 
-# Projects
-
 ## 🚀 Express 101
 
 ### 📝 Overview
