@@ -13,16 +13,40 @@ server.listen(port, () => {
     - authentication, authorization
 */
 
-// logger
-server.use((req, res, next) => {
-  const { url, method } = req;
-  const time = new Date();
-  const message = `${method} - ${url} - ${time}`;
-  console.log(message);
-  next();
-});
+// middleware imports
+const logger = require("./middleware/logger");
+const notFound = require("./middleware/notFound");
+const errorHandler = require("./middleware/errorHandler");
+
+// middleware - logger
+server.use(logger); // server level log, not sub route level log
+// server.use("/", logger);
 
 /* routes */
+
 server.get("/", (req, res) => {
   res.send("<h2>It works!</h2>");
 });
+
+server.get("/test", (req, res) => {
+  res.send("<h2>Test works!</h2>");
+});
+
+// error handling testing
+server.get("/error", (req, res, next) => {
+  // throw Error();
+  //   const data = getDataFromDatabase(); // returns error or data
+
+  // mock error object with attributes
+  const mockError = {
+    status: 403,
+    message: "something went wrong with the server",
+  };
+  next(mockError);
+});
+
+// middleware - 404 not found
+server.use(notFound);
+
+// middleware - errorHandler
+server.use(errorHandler);
