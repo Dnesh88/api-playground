@@ -18,12 +18,19 @@ const logger = require("./middleware/logger");
 const notFound = require("./middleware/notFound");
 const errorHandler = require("./middleware/errorHandler");
 
+// router imports
+const userRouter = require("./routers/user.router");
+
 // middleware - logger
 server.use(logger); // server level log, not sub route level log
 // server.use("/", logger);
 
-/* routes */
+/* ROUTES */
 
+// user router
+server.use("/users", userRouter);
+
+// root routes
 server.get("/", (req, res) => {
   res.send("<h2>It works!</h2>");
 });
