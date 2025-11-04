@@ -4,13 +4,28 @@ This project uses a simple server which services various endpoints. I also utili
 
 ## 🖥️ Features & Design
 
+- Server setup
+- Routes setup
 - Middleware modules
-  - Created modules for common functionalities such as logging, handling errors, and non-existing resources request.
+  - Logging
+  - Handling errors
+  - Handling non-existing resource requests
 
 ```
 const logger = require("./middleware/logger");
 const notFound = require("./middleware/notFound");
 const errorHandler = require("./middleware/errorHandler");
+```
+
+- **Security** Avoid exposing entire object to consumers as it can leak various internal details which can be a security concern.
+
+```
+res.json({
+    message: err.message,
+
+    // exposing the entire error object is a security concern
+    // error: err,
+  });
 ```
 
 ## ⚙️ Technologies Used
