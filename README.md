@@ -10,13 +10,9 @@ Howdy, this repo consist of various projects showcasing various API concepts tha
 
 You can find various projects.
 
----
-
 ### 🖥️ Features & Design
 
 - JavaScript modules
-
----
 
 ### ⚙️ Technologies Used
 
