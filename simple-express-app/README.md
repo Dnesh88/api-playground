@@ -17,7 +17,7 @@ const notFound = require("./middleware/notFound");
 const errorHandler = require("./middleware/errorHandler");
 ```
 
-- **Security** Avoid exposing entire object to consumers as it can leak various internal details which can be a security concern.
+- **Security:** Avoid exposing entire object to consumers as it can leak various internal details which can be a security concern.
 
 ```
 res.json({
